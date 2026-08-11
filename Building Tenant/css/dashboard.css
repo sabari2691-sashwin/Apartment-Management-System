@@ -1,0 +1,317 @@
+/* ==========================================
+   Dashboard CSS
+   Apartment Management System
+========================================== */
+
+/* Search Box */
+
+.search-box{
+    position:relative;
+    width:320px;
+}
+
+.search-box input{
+    width:100%;
+    padding:12px 18px 12px 45px;
+    border:none;
+    outline:none;
+    background:#f1f5f9;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.search-box input:focus{
+    background:#fff;
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+}
+
+.search-box i{
+    position:absolute;
+    left:18px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#64748b;
+}
+
+/* Right Navbar */
+
+.right-nav{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+/* Notification */
+
+.notification{
+    position:relative;
+    cursor:pointer;
+}
+
+.notification i{
+    font-size:22px;
+    color:#475569;
+}
+
+.notification .badge{
+    position:absolute;
+    top:-8px;
+    right:-10px;
+    font-size:10px;
+    border-radius:50%;
+}
+
+/* Dashboard Cards */
+
+.dashboard-card{
+    background:#fff;
+    border-radius:18px;
+    padding:22px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.dashboard-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 30px rgba(0,0,0,.12);
+}
+
+/* Card Icon */
+
+.card-icon{
+    width:70px;
+    height:70px;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:28px;
+}
+
+/* Card Colors */
+
+.blue{
+    background:#2563eb;
+}
+
+.purple{
+    background:#7c3aed;
+}
+
+.green{
+    background:#16a34a;
+}
+
+.cyan{
+    background:#0891b2;
+}
+
+.orange{
+    background:#ea580c;
+}
+
+.red{
+    background:#dc2626;
+}
+
+/* Card Content */
+
+.card-content{
+    text-align:right;
+}
+
+.card-content h3{
+    margin:0;
+    font-size:28px;
+    font-weight:700;
+}
+
+.card-content p{
+    margin:5px 0 0;
+    color:#64748b;
+    font-size:14px;
+}
+/* ==========================================
+   Charts Section
+========================================== */
+
+.table-box canvas{
+    width:100% !important;
+    max-height:320px;
+}
+
+/* ==========================================
+   Quick Action Buttons
+========================================== */
+
+.table-box .btn{
+    border-radius:15px;
+    padding:18px;
+    font-size:15px;
+    font-weight:600;
+    transition:all .3s ease;
+}
+
+.table-box .btn i{
+    font-size:24px;
+    margin-bottom:8px;
+    display:block;
+}
+
+.table-box .btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+
+/* ==========================================
+   Recent Activities
+========================================== */
+
+.list-group-item{
+    border:none;
+    border-bottom:1px solid #e5e7eb;
+    padding:16px 12px;
+    font-size:15px;
+    transition:.3s;
+}
+
+.list-group-item:hover{
+    background:#f8fafc;
+    padding-left:18px;
+}
+
+.list-group-item:last-child{
+    border-bottom:none;
+}
+
+/* ==========================================
+   Pending Payments Table
+========================================== */
+
+.table-hover tbody tr{
+    transition:.3s;
+}
+
+.table-hover tbody tr:hover{
+    background:#eff6ff;
+}
+
+.table-hover td,
+.table-hover th{
+    vertical-align:middle;
+}
+
+/* ==========================================
+   Dashboard Footer
+========================================== */
+
+.footer{
+    margin-top:30px;
+    padding:20px;
+    text-align:center;
+    color:#64748b;
+    font-size:14px;
+    border-top:1px solid #e5e7eb;
+}
+
+/* ==========================================
+   Dashboard Animation
+========================================== */
+
+.dashboard-card{
+    animation:cardFade .5s ease;
+}
+
+@keyframes cardFade{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ==========================================
+   Notification Animation
+========================================== */
+
+.notification .badge{
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.2);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+/* ==========================================
+   Card Number
+========================================== */
+
+.card-content h3{
+    color:#1e293b;
+}
+
+.card-content p{
+    font-weight:500;
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media(max-width:992px){
+
+    .search-box{
+        display:none;
+    }
+
+    .dashboard-card{
+        padding:18px;
+    }
+
+    .card-icon{
+        width:60px;
+        height:60px;
+        font-size:24px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .dashboard-card{
+        flex-direction:column;
+        text-align:center;
+        gap:15px;
+    }
+
+    .card-content{
+        text-align:center;
+    }
+
+    .right-nav{
+        gap:15px;
+    }
+
+}

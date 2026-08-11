@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Apartment Management System</title>
+
+    <!-- Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Google Font -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-building"></i>
+
+            <h3>AMS</h3>
+
+        </div>
+
+        <ul class="menu">
+
+            <li class="active">
+
+                <a href="dashboard.html">
+
+                    <i class="fa-solid fa-gauge"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="building-master.html">
+
+                    <i class="fa-solid fa-building"></i>
+
+                    <span>Building Master</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#">
+
+                    <i class="fa-solid fa-door-open"></i>
+
+                    <span>Flat Master</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <span>Tenant Master</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#">
+
+                    <i class="fa-solid fa-file-signature"></i>
+
+                    <span>Tenant Contract</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#">
+
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+
+                    <span>Invoice</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#">
+
+                    <i class="fa-solid fa-credit-card"></i>
+
+                    <span>Payments</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#">
+
+                    <i class="fa-solid fa-chart-column"></i>
+
+                    <span>Reports</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    <span>Settings</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Logout</span>
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <!-- Top Navbar -->
+
+        <div class="top-navbar">
+
+            <div class="left-nav">
+
+                <button class="menu-btn">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+                <h3>Dashboard</h3>
+
+            </div>
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search...">
+
+            </div>
+
+            <div class="right-nav">
+
+                <div class="notification">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <span class="badge bg-danger">3</span>
+
+                </div>
+
+                <div class="profile">
+
+                    <img src="https://i.pravatar.cc/45?img=12" alt="Admin">
+
+                    <div>
+
+                        <h6>Admin</h6>
+
+                        <small>
+                            <span style="color:#22c55e;">●</span>
+                            Online
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Welcome -->
+
+        <section class="welcome-section mt-4">
+
+            <h2>
+                Welcome Back, Admin 👋
+            </h2>
+
+            <p>
+                Here's what's happening in your Apartment Management System today.
+            </p>
+
+        </section>
+
+        <!-- Statistics -->
+
+        <div class="row mt-4">
+
+                        <!-- Card 1 -->
+
+            <div class="col-lg-4 col-md-6 mb-4">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon blue">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+
+                    <div class="card-content">
+
+                        <h3 id="buildingCount">24</h3>
+
+                        <p>Total Buildings</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Card 2 -->
+
+            <div class="col-lg-4 col-md-6 mb-4">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon purple">
+                        <i class="fa-solid fa-door-open"></i>
+                    </div>
+
+                    <div class="card-content">
+
+                        <h3 id="flatCount">320</h3>
+
+                        <p>Total Flats</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Card 3 -->
+
+            <div class="col-lg-4 col-md-6 mb-4">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon green">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div class="card-content">
+
+                        <h3 id="tenantCount">280</h3>
+
+                        <p>Total Tenants</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Card 4 -->
+
+            <div class="col-lg-4 col-md-6 mb-4">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon cyan">
+                        <i class="fa-solid fa-house-circle-check"></i>
+                    </div>
+
+                    <div class="card-content">
+
+                        <h3 id="occupiedCount">260</h3>
+
+                        <p>Occupied Flats</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Card 5 -->
+
+            <div class="col-lg-4 col-md-6 mb-4">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon orange">
+                        <i class="fa-solid fa-house-circle-xmark"></i>
+                    </div>
+
+                    <div class="card-content">
+
+                        <h3 id="vacantCount">60</h3>
+
+                        <p>Vacant Flats</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Card 6 -->
+
+            <div class="col-lg-4 col-md-6 mb-4">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon red">
+                        <i class="fa-solid fa-money-bill-wave"></i>
+                    </div>
+
+                    <div class="card-content">
+
+                        <h3 id="revenueCount">$24,500</h3>
+
+                        <p>Monthly Revenue</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Charts -->
+
+        <div class="row mt-2">
+
+            <div class="col-lg-8 mb-4">
+
+                <div class="table-box">
+
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+
+                        <h5>Monthly Revenue</h5>
+
+                        <span class="badge bg-primary">
+                            2026
+                        </span>
+
+                    </div>
+
+                    <canvas id="revenueChart"
+                        height="120"></canvas>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 mb-4">
+
+                <div class="table-box">
+
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+
+                        <h5>Occupancy</h5>
+
+                        <span class="badge bg-success">
+                            Live
+                        </span>
+
+                    </div>
+
+                    <canvas id="occupancyChart"
+                        height="220"></canvas>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Quick Actions -->
+
+        <div class="table-box mb-4">
+
+            <h5 class="mb-3">
+
+                <i class="fa-solid fa-bolt"></i>
+
+                Quick Actions
+
+            </h5>
+
+            <div class="row">
+
+                <div class="col-md-3 col-6 mb-3">
+
+                    <a href="building-master.html"
+                       class="btn btn-primary w-100">
+
+                        <i class="fa-solid fa-building"></i><br>
+
+                        Building
+
+                    </a>
+
+                </div>
+
+                <div class="col-md-3 col-6 mb-3">
+
+                    <a href="#"
+                       class="btn btn-success w-100">
+
+                        <i class="fa-solid fa-door-open"></i><br>
+
+                        Flat
+
+                    </a>
+
+                </div>
+
+                <div class="col-md-3 col-6 mb-3">
+
+                    <a href="#"
+                       class="btn btn-warning w-100">
+
+                        <i class="fa-solid fa-users"></i><br>
+
+                        Tenant
+
+                    </a>
+
+                </div>
+
+                <div class="col-md-3 col-6 mb-3">
+
+                    <a href="#"
+                       class="btn btn-danger w-100">
+
+                        <i class="fa-solid fa-credit-card"></i><br>
+
+                        Payment
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+                <!-- Recent Activities & Pending Payments -->
+
+        <div class="row">
+
+            <!-- Recent Activities -->
+
+            <div class="col-lg-6 mb-4">
+
+                <div class="table-box">
+
+                    <h5 class="mb-3">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        Recent Activities
+                    </h5>
+
+                    <ul class="list-group list-group-flush">
+
+                        <li class="list-group-item">
+                            🏢 New Building Added - Green Residency
+                        </li>
+
+                        <li class="list-group-item">
+                            👨 New Tenant Registered - Mr. Kumar
+                        </li>
+
+                        <li class="list-group-item">
+                            💰 Payment Received - Flat A102
+                        </li>
+
+                        <li class="list-group-item">
+                            📄 New Contract Created
+                        </li>
+
+                        <li class="list-group-item">
+                            🏠 Flat B205 Marked Vacant
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- Pending Payments -->
+
+            <div class="col-lg-6 mb-4">
+
+                <div class="table-box">
+
+                    <h5 class="mb-3">
+                        <i class="fa-solid fa-credit-card"></i>
+                        Pending Payments
+                    </h5>
+
+                    <div class="table-responsive">
+
+                        <table class="table table-hover">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Flat</th>
+                                    <th>Tenant</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>A101</td>
+                                    <td>Kumar</td>
+                                    <td>$250</td>
+                                    <td>
+                                        <span class="badge bg-warning">
+                                            Pending
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>B205</td>
+                                    <td>Ravi</td>
+                                    <td>$320</td>
+                                    <td>
+                                        <span class="badge bg-warning">
+                                            Pending
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>C102</td>
+                                    <td>Priya</td>
+                                    <td>$280</td>
+                                    <td>
+                                        <span class="badge bg-success">
+                                            Paid
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+
+        <footer class="footer">
+
+            <p>
+                © 2026 Apartment Management System |
+                Developed by Selva Sabareesan
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Chart.js -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Dashboard JS -->
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

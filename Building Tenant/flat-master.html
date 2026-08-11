@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flat Master | Apartment Management System</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Responsive -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-building"></i>
+
+            <h3>AMS</h3>
+
+        </div>
+
+        <ul class="menu">
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-gauge"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="building-master.html">
+                    <i class="fa-solid fa-building"></i>
+                    Building Master
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="flat-master.html">
+                    <i class="fa-solid fa-door-open"></i>
+                    Flat Master
+                </a>
+            </li>
+
+            <li>
+                <a href="tenant-master.html">
+                    <i class="fa-solid fa-users"></i>
+                    Tenant Master
+                </a>
+            </li>
+
+            <li>
+                <a href="tenant-contract.html">
+                    <i class="fa-solid fa-file-signature"></i>
+                    Tenant Contract
+                </a>
+            </li>
+
+            <li>
+                <a href="invoice.html">
+                    <i class="fa-solid fa-file-invoice"></i>
+                    Invoice
+                </a>
+            </li>
+
+            <li>
+                <a href="payment.html">
+                    <i class="fa-solid fa-credit-card"></i>
+                    Payments
+                </a>
+            </li>
+
+            <li>
+                <a href="reports.html">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Reports
+                </a>
+            </li>
+
+            <li>
+                <a href="settings.html">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main-content">
+
+        <!-- Header -->
+
+        <header class="topbar">
+
+            <button class="menu-toggle">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+            <h2>Flat Master</h2>
+
+            <div class="top-right">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input type="text"
+                        placeholder="Search...">
+
+                </div>
+
+                <div class="notification">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                </div>
+
+                <div class="profile">
+
+                    <img src="https://i.pravatar.cc/100">
+
+                    <div>
+
+                        <h6>Admin</h6>
+
+                        <small>Administrator</small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- Title -->
+
+        <section class="welcome-section">
+
+            <h2>Flat Master</h2>
+
+            <p>Add and manage apartment flats.</p>
+
+        </section>
+
+        <!-- Form -->
+
+        <section class="card-section">
+
+            <div class="card">
+
+                <div class="card-header">
+
+                    <h4>
+
+                        <i class="fa-solid fa-door-open"></i>
+
+                        Add New Flat
+
+                    </h4>
+
+                </div>
+
+                <div class="card-body">
+
+                    <form id="flatForm">
+
+                        <div class="row">
+                            <!-- Flat Number -->
+
+<div class="col-md-6 mb-3">
+
+    <label class="form-label">Flat Number</label>
+
+    <input
+        type="text"
+        id="flatNumber"
+        class="form-control"
+        placeholder="Enter Flat Number"
+        required>
+
+</div>
+
+<!-- Building Name -->
+
+<div class="col-md-6 mb-3">
+
+    <label class="form-label">Building Name</label>
+
+    <select
+        id="buildingName"
+        class="form-select"
+        required>
+
+        <option value="">Select Building</option>
+
+        
+
+    </select>
+
+</div>
+
+<!-- Floor Number -->
+
+<div class="col-md-6 mb-3">
+
+    <label class="form-label">Floor Number</label>
+
+    <input
+        type="number"
+        id="floorNumber"
+        class="form-control"
+        placeholder="Enter Floor Number"
+        required>
+
+</div>
+
+<!-- Flat Type -->
+
+<div class="col-md-6 mb-3">
+
+    <label class="form-label">Flat Type</label>
+
+    <select
+        id="flatType"
+        class="form-select">
+
+        <option>1 BHK</option>
+        <option>2 BHK</option>
+        <option>3 BHK</option>
+        <option>4 BHK</option>
+
+    </select>
+
+</div>
+
+<!-- Area -->
+
+<div class="col-md-6 mb-3">
+
+    <label class="form-label">Area (Sq.ft)</label>
+
+    <input
+        type="number"
+        id="area"
+        class="form-control"
+        placeholder="Enter Area">
+
+</div>
+
+<!-- Monthly Rent -->
+
+<div class="col-md-6 mb-3">
+
+    <label class="form-label">Monthly Rent</label>
+
+    <input
+        type="number"
+        id="rent"
+        class="form-control"
+        placeholder="Enter Monthly Rent">
+
+</div>
+
+<!-- Advance Amount -->
+
+<div class="col-md-6 mb-3">
+
+    <label class="form-label">Advance Amount</label>
+
+    <input
+        type="number"
+        id="advance"
+        class="form-control"
+        placeholder="Enter Advance Amount">
+
+</div>
+
+<!-- Status -->
+
+<div class="col-md-6 mb-3">
+
+    <label class="form-label">Status</label>
+
+    <select
+        id="status"
+        class="form-select">
+
+        <option>Vacant</option>
+        <option>Occupied</option>
+        <option>Maintenance</option>
+
+    </select>
+
+</div>
+
+<!-- Remarks -->
+
+<div class="col-12 mb-3">
+
+    <label class="form-label">Remarks</label>
+
+    <textarea
+        id="remarks"
+        class="form-control"
+        rows="3"
+        placeholder="Enter Remarks"></textarea>
+
+</div>
+
+<!-- Buttons -->
+
+<div class="col-12">
+
+    <button
+        type="submit"
+        class="btn btn-primary">
+
+        <i class="fa-solid fa-floppy-disk"></i>
+
+        Save Flat
+
+    </button>
+
+    <button
+        type="reset"
+        class="btn btn-secondary ms-2">
+
+        Reset
+
+    </button>
+
+</div>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+<!-- Flat Records -->
+
+<section class="card-section mt-4">
+
+    <div class="card">
+
+        <div class="card-header d-flex justify-content-between align-items-center">
+
+            <h4>
+
+                <i class="fa-solid fa-table"></i>
+
+                Flat Records
+
+            </h4>
+
+            <input
+                type="text"
+                id="searchFlat"
+                class="form-control w-25"
+                placeholder="Search Flat...">
+
+        </div>
+
+        <div class="card-body">
+
+            <div class="table-responsive">
+
+                <table class="table table-bordered table-hover align-middle">
+
+                    <thead class="table-dark">
+
+                        <tr>
+
+                            <th>S.No</th>
+                            <th>Flat No</th>
+                            <th>Building</th>
+                            <th>Floor</th>
+                            <th>Type</th>
+                            <th>Area</th>
+                            <th>Rent</th>
+                            <th>Status</th>
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="flatTableBody">
+
+                        <!-- JavaScript will load records here -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+
+<footer class="footer mt-4">
+
+    <p>
+
+        © 2026 Apartment Management System |
+        Developed by Selva Sabareesan
+
+    </p>
+
+</footer>
+
+</main>
+
+</div>
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Flat Master JS -->
+
+<script src="js/flat.js"></script>
+
+</body>
+
+</html>
